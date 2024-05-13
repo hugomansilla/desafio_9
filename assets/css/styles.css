@@ -1,0 +1,263 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilos bajo 576 px*/
+@media screen and (max-width: 576px) {
+
+/* Estructura general*/
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "sidebar"
+    "header"
+    "main"
+    "footer";
+}
+
+/* Encabezado*/
+.header{
+    grid-area: header;
+    background-color: #4841E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.form-select{
+    margin: 10px 0px 20px 0px;
+    width: 90% !important;
+}
+
+.title-with-icon{
+    display: inline-flex;
+    align-items: center;
+}
+
+.title-with-icon h3 {
+    margin-left: 5px;
+}
+
+/* Menú superior*/
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #416FE8;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar-esconder{
+    display: none;
+}
+
+.sidebar-mostrar{
+    display: inline-flex;
+    margin-left: 100px;
+}
+
+.navbar-toggler {
+    border-color: white !important; /* Cambia el color de las líneas del icono */
+  }
+
+.navbar{
+    color: white !important;
+}
+
+.navbar-toggler {
+    color: white !important;
+  }
+
+/* Grilla Main */
+.main{
+    grid-area: main;
+}
+
+/*Creada con CSS Grid*/
+.grid-main{
+    display: grid; 
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* Creada con Flexbox*/
+.grid-main-item{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    border: 1px solid rgb(226, 223, 223);
+    padding-top: 25px;
+}
+
+.grid-main-item img{
+    width: 80%;
+    height: 100%;
+    align-self: center;
+}
+
+.cotizar{
+    background-color: #416FE8;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cotizar:hover{
+    background-color: red;
+}
+
+/* Pie de página*/
+.footer{
+    grid-area: footer;
+    background-color: #4841E8;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  }
+
+
+/* Estilos sobre 576 px*/
+@media screen and (min-width: 576px)  {
+
+/* Estructura general*/
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "footer main";
+}
+
+/* Encabezado*/
+.header{
+    grid-area: header;
+    background-color: #4841E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.form-select{
+    margin: 10px 0px 20px 0px;
+    width: 90% !important;
+}
+
+.title-with-icon{
+    display: inline-flex;
+    align-items: center;
+}
+
+.title-with-icon h3 {
+    margin-left: 5px;
+}
+
+/* Barra lateral*/
+.sidebar{
+    grid-area: sidebar;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #416FE8;
+    color: white;
+    padding-top: 30px;
+}
+
+.sidebar-mostrar{
+    display: none;
+}
+
+.sidebar-items ul{
+    margin: 10px;
+    padding: 0;
+    display: flex; 
+    flex-direction: column;
+}
+
+.sidebar-items li{
+    padding-bottom: 15px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.sidebar-items a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-items a:hover{
+    background-color: red;
+}
+
+/* Grilla Main */
+.main{
+    grid-area: main;
+    margin-bottom: 20px;
+}
+
+/*Creada con CSS Grid*/
+.grid-main{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* Creada con Flexbox*/
+.grid-main-item{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    border: 1px solid rgb(226, 223, 223);
+    padding-top: 25px;
+}
+
+.grid-main-item img{
+    width: 250px;
+    height: 230px;
+    align-self: center;
+}
+
+.cotizar{
+    background-color: #416FE8;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cotizar:hover{
+    background-color: red;
+}
+
+/* Pie de página*/
+.footer{
+    grid-area: footer;
+    background-color: #4841E8;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+}
